@@ -31,7 +31,7 @@ __all__ = [
 class Comment(object):
   def __init__(self, data):
     self._data = data
-    for field, body in self.data.items():
+    for field, body in list(self.data.items()):
       setattr(self, field, body)
 
   def __str__(self):

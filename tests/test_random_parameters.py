@@ -15,5 +15,5 @@ def test_sorting_methods():
   assert len(sorting_methods) == len(methods)
   assert sorting_methods == sort.methods
 
-  for key, value in methods.items():
+  for key, value in list(methods.items()):
     assert key == value.upper()

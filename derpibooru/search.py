@@ -194,7 +194,7 @@ if version_info < (3, 0):
     """
     Returns a result wrapped in a new instance of Image().
     """
-    return Image(self._search.next())
+    return Image(next(self._search))
 
   Search.next = next
 

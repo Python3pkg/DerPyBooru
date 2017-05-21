@@ -37,7 +37,7 @@ __all__ = [
 ]
 
 if version_info < (3, 0):
-  from urllib import urlencode
+  from urllib.parse import urlencode
 else:
   from urllib.parse import urlencode
 

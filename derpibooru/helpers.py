@@ -65,7 +65,7 @@ def user_option(option):
 def format_params(params):
   p = {}
 
-  for key, value in params.items():
+  for key, value in list(params.items()):
     if key == "key":
       if value:
         p["key"] = value

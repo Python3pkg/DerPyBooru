@@ -41,7 +41,7 @@ class Image(object):
   def __init__(self, data):
     self._data = data
 
-    for field, body in data.items():
+    for field, body in list(data.items()):
       if not hasattr(self, field):
         setattr(self, field, body) 
 
@@ -59,7 +59,7 @@ class Image(object):
 
   @property
   def representations(self):
-    sizes = self.data["representations"].items()
+    sizes = list(self.data["representations"].items())
     images = { image: "https:{}".format(url) for image, url in sizes }
 
     return images
